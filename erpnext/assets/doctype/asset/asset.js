@@ -5,7 +5,6 @@ frappe.provide("erpnext.asset");
 
 frappe.ui.form.on('Asset', {
 	onload: function(frm) {
-		console.log('hi asset00');
 		frm.set_query("item_code", function() {
 			return {
 				"filters": {

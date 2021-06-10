@@ -25,10 +25,10 @@ class Asset(AccountsController):
 		self.validate_gross_and_purchase_amount()
 		if self.get("schedules"):
 			self.validate_expected_value_after_useful_life()
-
 		self.status = self.get_status()
 
 	def on_submit(self):
+		frappe.msgprint("Test")
 		self.validate_in_use_date()
 		self.set_status()
 		self.make_asset_movement()
